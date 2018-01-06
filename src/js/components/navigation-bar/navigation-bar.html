@@ -1,5 +1,5 @@
 <ul class="navigationBar">
    <li v-for="item in items">
-      <navigation-button v-bind="item" @click="onNavItemClicked"></navigation-button>
+      <router-link :to="item.action">{{item.title}}</router-link>
   </li>
 </ul>

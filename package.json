@@ -24,7 +24,8 @@
     "envify": "4.1.0",
     "stringify": "5.2.0",
     "underscore": "1.8.3",
-    "vue": "2.4.2"
+    "vue": "2.4.2",
+    "vue-router": "3.0.1"
   },
   "browser": {
     "vue": "vue/dist/vue.common.js"

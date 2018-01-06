@@ -8,7 +8,8 @@
    </head>
    <body>
       <div id="app">
-         <navigation-controller></navigation-controller>
+         <navigation-bar :items="navigationItems"></navigation-bar>
+         <router-view></router-view>
       </div>
       <script src="js/thirdparty.js"></script>
       <script src="js/main.js"></script>
