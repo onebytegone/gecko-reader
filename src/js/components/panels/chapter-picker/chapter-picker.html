@@ -1,9 +1,8 @@
 <div class="panel chapterPicker">
-   <ul>
-      <li><a href="#" role="button">1</a></li>
-      <li><a href="#" role="button">2</a></li>
-      <li><a href="#" role="button">3</a></li>
-      <li><a href="#" role="button">4</a></li>
-      <li><a href="#" role="button">5</a></li>
+   <h1 v-if="book">{{book.bookDisplayTitle}}</h1>
+   <ul v-if="book">
+      <li v-for="chapterNum in book.chapterCount">
+         <router-link :to="{ name: 'readingPage', params: { book: book.urlSegment, chapter: chapterNum }}">{{chapterNum}}</router-link>
+     </li>
    </ul>
 </div>
