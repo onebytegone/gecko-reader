@@ -1,7 +1,7 @@
 'use strict';
 
-var App = require('./controllers/App'),
+var App = require('./app/App'),
     app;
 
 app = new App();
-app.start();
+app.$mount('#app');
