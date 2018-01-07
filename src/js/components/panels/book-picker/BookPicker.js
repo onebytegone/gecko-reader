@@ -11,7 +11,7 @@ module.exports = {
       books: function() {
          var edition = this.$store.state.edition;
 
-         return edition.books;
+         return edition ? edition.books : undefined;
       },
 
    },

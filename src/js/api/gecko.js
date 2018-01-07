@@ -24,6 +24,20 @@ module.exports = {
          });
    },
 
+   fetchVerses: function(editionContentUrl, startingVerseID, endingVerseID) {
+      var range = startingVerseID + '-' + endingVerseID,
+          url = this._appendSegments(editionContentUrl, 'data', range);
+
+      return this._fetchJson(url)
+         .then(function(json) {
+            return json.ranges[range];
+         });
+   },
+
+   makeVerseIdentifer: function(bookNumber, chapterNumber, verseNumber) {
+      return bookNumber + ('00' + chapterNumber).slice(-3) + ('00' + verseNumber).slice(-3);
+   },
+
    _appendSegments: function(url/* , segments... */) {
       return url + [].slice.call(arguments, 1).join('/');
    },

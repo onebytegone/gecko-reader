@@ -12,21 +12,27 @@ module.exports = new Vuex.Store({
 
    state: {
       locale: 'en',
-      languages: {},
-      edition: {},
+      languages: undefined,
+      edition: undefined,
    },
 
    getters: {
 
       editions: function(state) {
-         var localeData = state.languages[state.locale];
+         var localeData = state.languages ? state.languages[state.locale] : undefined;
 
-         return localeData ? localeData.editions : [];
+         return localeData ? localeData.editions : undefined;
       },
 
       book: function(state) {
+         var bookNum;
+
          if (state.edition) {
-            return _.findWhere(state.edition.books, { urlSegment: state.route.params.book });
+            bookNum = _.findKey(state.edition.books, { urlSegment: state.route.params.book });
+
+            if (bookNum) {
+               return _.extend({ bookNum: bookNum }, state.edition.books[bookNum]);
+            }
          }
 
          return undefined;
