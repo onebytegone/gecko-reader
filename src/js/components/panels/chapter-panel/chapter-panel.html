@@ -5,7 +5,7 @@
    <div class="pure-menu pure-menu-horizontal tabBar">
       <ul class="pure-menu-list">
          <li class="pure-menu-item" :class="{ 'pure-menu-selected': tab.name === selectedTabName }" v-for="tab in tabs">
-            <tab-button class="pure-menu-link" :title="tab.title" :name="tab.name" @click="onTabClick"></tab-button>
+            <tab-button class="pure-menu-link" v-bind="tab.button" :name="tab.name" @click="onTabClick"></tab-button>
          </li>
       </ul>
    </div>

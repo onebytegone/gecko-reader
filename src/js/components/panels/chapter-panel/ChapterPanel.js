@@ -14,13 +14,19 @@ module.exports = {
          tabs: [
             {
                name: 'text',
-               title: 'Text',
                component: ReadingPanel,
+               button: {
+                  title: 'Text',
+                  icon: 'fa-book',
+               },
             },
             {
                name: 'gems',
-               title: 'Gems',
                component: GemsPanel,
+               button: {
+                  title: 'Gems',
+                  icon: 'fa-diamond',
+               },
             },
          ],
          selectedTabName: 'text',
