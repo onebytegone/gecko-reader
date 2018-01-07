@@ -1,0 +1,115 @@
+// Styling for chapter text
+
+$color-chapterNum: $md-grey-700;
+$color-verseNum: $color-chapterNum;
+
+.chapterText {
+   display: inline-block;
+}
+
+%numberStyling {
+   line-height: 1;
+   display: inline-block;
+   a {
+      text-decoration: none;
+      // Disabled links until proper support can be added
+      pointer-events: none;
+      cursor: default;
+   }
+}
+
+.chapterNum {
+   font-size: 1.8em;
+   font-weight: bold;
+   @extend %numberStyling;
+   margin: -0.25em;
+   color: $color-chapterNum;
+   padding: 0.25em 0.5em 0.25em 0.25em;
+   .style-l & {
+      display: inline;
+   }
+   a {
+      color: $color-chapterNum;
+      &:visited {
+         color: $color-chapterNum;
+      }
+   }
+}
+
+.verseNum {
+   @extend %numberStyling;
+   font-weight: bold;
+   top: -0.15em;
+   color: $color-verseNum;
+   a {
+      color: $color-verseNum;
+      &:visited {
+         color: $color-verseNum;
+      }
+   }
+}
+
+.verse span {
+   line-height: 1.6em;
+   &.alt,
+   &.smcap {
+      font-size: 0.8em;
+   }
+   &.style-b.first {
+      padding-left: 1em;
+   }
+   &.style-l {
+      text-indent: -3em;
+      padding-left: 3em;
+      display: block;
+   }
+   &.style-z {
+      text-indent: -1.5em;
+      padding-left: 3em;
+      display: block;
+   }
+   &.style-p {
+      text-indent: -2.5em;
+      padding-left: 4em;
+      display: block;
+   }
+   &.style-l .verseNum:first-child,
+   &.style-b .verseNum:first-child {
+      text-indent: 0;
+   }
+}
+
+.parabreak {
+   display: block;
+   height: 0;
+   .verse > & {
+      &:last-child {
+         height: 0.25em;
+      }
+   }
+}
+
+.newblock {
+   display: block;
+   height: 0;
+}
+
+.superscription {
+   span.style-s,
+   span.style-w {
+      text-align: center;
+      display: block;
+   }
+}
+
+.superscription span.parabreak,
+.superscription br.para,
+span.verse > span.parabreak:first-child,
+span.verse > br.para:first-child {
+   display: none;
+}
+
+.xrefLink,
+.footnoteLink {
+   display: none;
+}
