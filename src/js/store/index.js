@@ -14,6 +14,7 @@ module.exports = new Vuex.Store({
       locale: 'en',
       languages: undefined,
       edition: undefined,
+      chapter: undefined,
    },
 
    getters: {
@@ -68,6 +69,23 @@ module.exports = new Vuex.Store({
          return Q.when();
       },
 
+      fetchChapter: function(context, chapterNum) {
+         var bookNum, startVs, endVs;
+
+         if (context.state.edition && context.getters.book) {
+            bookNum = context.getters.book.bookNum;
+            startVs = geckoAPI.makeVerseIdentifer(bookNum, chapterNum, 0);
+            endVs = geckoAPI.makeVerseIdentifer(bookNum, chapterNum, 999);
+
+            return geckoAPI.fetchVerses(context.state.edition.contentAPI, startVs, endVs)
+               .then(function(chapterData) {
+                  context.commit('storeChapter', chapterData);
+               });
+         }
+
+         return Q.when();
+      },
+
    },
 
    mutations: {
@@ -78,6 +96,10 @@ module.exports = new Vuex.Store({
 
       storeEdition: function(state, payload) {
          state.edition = payload;
+      },
+
+      storeChapter: function(state, payload) {
+         state.chapter = payload;
       },
 
    },

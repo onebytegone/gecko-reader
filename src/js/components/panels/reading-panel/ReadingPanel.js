@@ -6,6 +6,12 @@ module.exports = {
 
    template: template,
 
-   props: [ 'chapter' ],
+   computed: {
+
+      chapter: function() {
+         return this.$store.state.chapter;
+      },
+
+   },
 
 };

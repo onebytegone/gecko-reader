@@ -7,19 +7,18 @@ module.exports = {
 
    template: template,
 
-   props: [ 'chapter' ],
-
    computed: {
 
       studyContent: function() {
-         var items = [],
+         var chapter = this.$store.state.chapter,
+             items = [],
              titleStudyNote, verseZero;
 
-         if (!this.chapter) {
+         if (!chapter) {
             return [];
          }
 
-         titleStudyNote = _.find(this.chapter.commentaries, function(commentary) {
+         titleStudyNote = _.find(chapter.commentaries, function(commentary) {
             return !!commentary.label;
          });
 
@@ -31,14 +30,14 @@ module.exports = {
          }
 
          items = _.chain([ verseZero ])
-            .concat(_.map(this.chapter.verses, function(verse) {
+            .concat(_.map(chapter.verses, function(verse) {
                return {
-                  studyNotes: _.find(this.chapter.commentaries, function(commentary) {
+                  studyNotes: _.find(chapter.commentaries, function(commentary) {
                      return commentary.source === verse.vsID;
                   }),
                   standardCitation: verse.standardCitation,
                };
-            }.bind(this)))
+            }))
             .filter(_.identity)
             .value();
 

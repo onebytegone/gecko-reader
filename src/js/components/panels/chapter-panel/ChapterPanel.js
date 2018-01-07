@@ -3,8 +3,7 @@
 var template = require('./chapter-panel.html'),
     GemsPanel = require('../reading-panel/ReadingPanel'),
     ReadingPanel = require('../gems-panel/GemsPanel'),
-    TabBar = require('../../tab-bar/TabBar'),
-    geckoAPI = require('../../../api/gecko');
+    TabBar = require('../../tab-bar/TabBar');
 
 module.exports = {
 
@@ -38,20 +37,7 @@ module.exports = {
    methods: {
 
       fetchData: function() {
-         var chapterNum = this.$store.state.route.params.chapter,
-             bookNum, startVs, endVs;
-
-         if (this.$store.state.edition && this.$store.getters.book) {
-            bookNum = this.$store.getters.book.bookNum;
-            startVs = geckoAPI.makeVerseIdentifer(bookNum, chapterNum, 0);
-            endVs = geckoAPI.makeVerseIdentifer(bookNum, chapterNum, 999);
-
-            geckoAPI.fetchVerses(this.$store.state.edition.contentAPI, startVs, endVs)
-               .then(function(chapterData) {
-                  this.chapter = chapterData;
-               }.bind(this))
-               .done();
-         }
+         this.$store.dispatch('fetchChapter', this.$store.state.route.params.chapter).done();
       },
 
       onItemSelected: function(action) {
