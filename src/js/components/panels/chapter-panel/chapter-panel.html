@@ -1,4 +1,4 @@
-<div class="panel fixedPanel chapterPanel">
+<div class="chapterPanel">
    <div class="tabPanels">
       <component v-for="tab in tabs" :key="tab.name" :is="tab.component" v-show="tab.name === selectedTabName"></component>
    </div>
