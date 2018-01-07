@@ -2,7 +2,8 @@
 
 .tabBar {
    display: flex;
-   background-color: $md-indigo-400;
+   background-color: $md-blue-800;
+   box-shadow: 0 0 2px $md-grey-600;
    .pure-menu-list {
       width: 100%;
       display: flex;
@@ -13,7 +14,7 @@
    }
    .pure-menu-selected {
       .pure-menu-link {
-         background-color: $md-indigo-700;
+         background-color: $md-blue-900;
          color: $md-grey-100;
       }
    }
@@ -23,7 +24,7 @@
       color: $md-grey-100;
       &:hover,
       &:focus {
-         background-color: $md-indigo-700;
+         background-color: $md-blue-900;
       }
    }
 }

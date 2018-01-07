@@ -5,13 +5,23 @@
    .gridPicker {
       margin-bottom: 1em;
       .colorOne {
-         background-color: $md-indigo-300;
+         background-color: $md-blue-700;
+         &:hover {
+            background-color: $md-blue-900;
+         }
       }
       .colorTwo {
-         background-color: $md-indigo-400;
+         color: $md-grey-50;
+         background-color: $md-blue-800;
+         &:hover {
+            background-color: $md-blue-900;
+         }
       }
       .colorThree {
-         background-color: $md-indigo-500;
+         background-color: $md-blue-900;
+         &:hover {
+            background-color: $md-blue-900;
+         }
       }
    }
 }

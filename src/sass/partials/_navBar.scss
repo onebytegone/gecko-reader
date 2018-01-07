@@ -1,7 +1,8 @@
 // Navigation bar styles
 
 .navigationBar {
-   background-color: $md-indigo-400;
+   background-color: $md-blue-800;
+   box-shadow: 0 0 2px $md-grey-600;
    .pure-menu-link {
       font-size: 28px;
       padding: 8px 16px;
@@ -9,7 +10,7 @@
       &:hover,
       &:focus,
       &.router-link-exact-active, {
-         background-color: $md-indigo-700;
+         background-color: $md-blue-900;
       }
    }
 }
