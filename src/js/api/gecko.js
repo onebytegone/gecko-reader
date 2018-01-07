@@ -43,10 +43,21 @@ module.exports = {
    },
 
    _fetchJson: function(url) {
-      return Q.when(fetchJsonp(url, { timeout: 10000 }))
+      // Doing a little hand-waving so JSONP requests can be cached...
+      var callbackName = 'geckoReader_' + url.replace(/\W+/g, ''),
+          promise;
+
+      if (window[callbackName]) {
+         // TODO: support multiple calls to the same endpoint
+         throw new Error('looks like a request to ' + url + ' is already running.');
+      }
+
+      promise = Q.when(fetchJsonp(url, { timeout: 10000, jsonpCallbackFunction: callbackName }))
          .then(function(response) {
             return response.json();
          });
+
+      return promise;
    },
 
 };
