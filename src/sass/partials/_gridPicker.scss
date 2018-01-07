@@ -1,0 +1,26 @@
+// Syles for grid pickers
+
+.gridPicker {
+   margin: 0;
+   padding: 0;
+   li {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0 2px 2px 0;
+      padding: 0;
+   }
+   a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      text-decoration: none;
+      color: $md-grey-100;
+      background-color: $md-indigo-400;
+      &:hover,
+      &:focus {
+         background-color: $md-indigo-700;
+      }
+   }
+}

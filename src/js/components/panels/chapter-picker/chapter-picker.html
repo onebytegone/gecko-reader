@@ -1,6 +1,6 @@
 <div class="scrollingPanel chapterPicker">
    <h1 v-if="book">{{book.bookDisplayTitle}}</h1>
-   <ul v-if="book">
+   <ul v-if="book" class="gridPicker">
       <li v-for="chapterNum in book.chapterCount">
          <router-link :to="{ name: 'chapterPanel', params: { book: book.urlSegment, chapter: chapterNum }}">{{chapterNum}}</router-link>
      </li>

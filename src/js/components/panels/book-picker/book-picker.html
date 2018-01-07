@@ -1,5 +1,5 @@
 <div class="scrollingPanel bookPicker">
-   <ul>
+   <ul class="gridPicker">
       <li v-for="book in books">
          <router-link :to="{ name: 'chapterSelection', params: { book: book.urlSegment }}">{{book.officialAbbreviation}}</router-link>
      </li>
