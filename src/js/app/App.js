@@ -50,6 +50,7 @@ module.exports = Vue.extend({
          navigationItems: [
             { title: 'Home', icon: 'fa-home', route: { name: 'bookSelection' } },
          ],
+         textScale: 'text-scale-ten',
       };
    },
 

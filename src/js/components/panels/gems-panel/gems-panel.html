@@ -3,7 +3,7 @@
       <template v-if="hasAnyStudyContent">
          <div class="studyContentGroup" v-for="item in studyContent" v-if="item.hasAdditionalContent">
             <h3 v-html="item.standardCitation"></h3>
-            <div v-if="item.studyNotes" v-html="item.studyNotes.content"></div>
+            <div class="studyNotes" v-if="item.studyNotes" v-html="item.studyNotes.content"></div>
          </div>
       </template>
       <p v-else>No additional content</p>
