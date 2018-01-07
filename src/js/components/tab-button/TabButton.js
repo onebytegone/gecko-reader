@@ -11,7 +11,7 @@ module.exports = {
          type: String,
          required: true,
       },
-      action: {
+      name: {
          type: String,
       },
       isSelected: {
@@ -23,7 +23,7 @@ module.exports = {
    methods: {
 
       onClick: function() {
-         this.$emit('click', this.action);
+         this.$emit('click', this.name);
       },
 
    },

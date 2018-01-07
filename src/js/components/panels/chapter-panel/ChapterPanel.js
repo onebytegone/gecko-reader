@@ -1,9 +1,9 @@
 'use strict';
 
 var template = require('./chapter-panel.html'),
-    GemsPanel = require('../reading-panel/ReadingPanel'),
-    ReadingPanel = require('../gems-panel/GemsPanel'),
-    TabBar = require('../../tab-bar/TabBar');
+    ReadingPanel = require('../reading-panel/ReadingPanel'),
+    GemsPanel = require('../gems-panel/GemsPanel'),
+    TabButton = require('../../tab-button/TabButton');
 
 module.exports = {
 
@@ -11,19 +11,24 @@ module.exports = {
 
    data: function() {
       return {
-         chapter: undefined,
-         tabBarItems: [
-            { title: 'text', action: 'text' },
-            { title: 'gems', action: 'gems' },
+         tabs: [
+            {
+               name: 'text',
+               title: 'Text',
+               component: ReadingPanel,
+            },
+            {
+               name: 'gems',
+               title: 'Gems',
+               component: GemsPanel,
+            },
          ],
-         selectedPanel: 'text',
+         selectedTabName: 'text',
       };
    },
 
    components: {
-      'reading-panel': ReadingPanel,
-      'gems-panel': GemsPanel,
-      'tab-bar': TabBar,
+      'tab-button': TabButton,
    },
 
    computed: {
@@ -40,8 +45,8 @@ module.exports = {
          this.$store.dispatch('fetchChapter', this.$store.state.route.params.chapter).done();
       },
 
-      onItemSelected: function(action) {
-         this.selectedPanel = action;
+      onTabClick: function(action) {
+         this.selectedTabName = action;
       },
 
    },

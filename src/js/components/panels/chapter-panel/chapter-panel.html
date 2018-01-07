@@ -1,5 +1,10 @@
 <div class="panel chapterPanel">
-   <reading-panel v-show="selectedPanel !== 'text'"></reading-panel>
-   <gems-panel v-show="selectedPanel !== 'gems'"></gems-panel>
-   <tab-bar :items="tabBarItems" @itemSelected="onItemSelected"></tab-bar>
+   <div class="tabPanels">
+      <component v-for="tab in tabs" :is="tab.component" v-show="tab.name === selectedTabName"></component>
+   </div>
+   <ul class="tabBar">
+      <li v-for="tab in tabs">
+         <tab-button :title="tab.title" :name="tab.name" :isSelected="tab.name === selectedTabName" @click="onTabClick"></tab-button>
+      </li>
+   </ul>
 </div>
