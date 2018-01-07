@@ -1,0 +1,5 @@
+<div class="panel chapterPanel">
+   <reading-panel :chapter="chapter" v-show="selectedPanel !== 'text'"></reading-panel>
+   <gems-panel :chapter="chapter" v-show="selectedPanel !== 'gems'"></gems-panel>
+   <tab-bar :items="tabBarItems" @itemSelected="onItemSelected"></tab-bar>
+</div>

@@ -8,7 +8,7 @@ var Vue = require('vue'),
     NavigationBar = require('../components/navigation-bar/NavigationBar'),
     BookPicker = require('../components/panels/book-picker/BookPicker'),
     ChapterPicker = require('../components/panels/chapter-picker/ChapterPicker'),
-    ReadingPanel = require('../components/panels/reading-panel/ReadingPanel'),
+    ChapterPanel = require('../components/panels/chapter-panel/ChapterPanel'),
     router;
 
 Vue.use(VueRouter);
@@ -27,8 +27,8 @@ router = new VueRouter({
       },
       {
          path: '/:book/:chapter',
-         name: 'readingPage',
-         component: ReadingPanel,
+         name: 'chapterPanel',
+         component: ChapterPanel,
       },
    ],
 });

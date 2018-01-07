@@ -1,0 +1,6 @@
+<div class="panel gemsPanel">
+   <div v-for="item in studyContent">
+      <h3 v-html="item.standardCitation"></h3>
+      <div v-if="item.studyNotes" v-html="item.studyNotes.content"></div>
+   </div>
+</div>

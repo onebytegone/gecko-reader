@@ -2,7 +2,7 @@
    <h1 v-if="book">{{book.bookDisplayTitle}}</h1>
    <ul v-if="book">
       <li v-for="chapterNum in book.chapterCount">
-         <router-link :to="{ name: 'readingPage', params: { book: book.urlSegment, chapter: chapterNum }}">{{chapterNum}}</router-link>
+         <router-link :to="{ name: 'chapterPanel', params: { book: book.urlSegment, chapter: chapterNum }}">{{chapterNum}}</router-link>
      </li>
    </ul>
 </div>

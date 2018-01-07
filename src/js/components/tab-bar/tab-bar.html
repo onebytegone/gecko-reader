@@ -1,0 +1,5 @@
+<ul class="tabBar">
+   <li v-for="(item, index) in items">
+      <tab-button v-bind="item" :isSelected="selectedIndex === index" @click="onItemClicked"></tab-button>
+  </li>
+</ul>
