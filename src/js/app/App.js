@@ -48,7 +48,7 @@ module.exports = Vue.extend({
    data: function() {
       return {
          navigationItems: [
-            { title: 'Home', route: { name: 'bookSelection' } },
+            { title: 'Home', icon: 'fa-home', route: { name: 'bookSelection' } },
          ],
       };
    },

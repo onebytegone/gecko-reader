@@ -1,7 +1,8 @@
 <div class="pure-menu pure-menu-horizontal navigationBar">
    <ul class="pure-menu-list">
       <li class="pure-menu-item" v-for="item in items">
-         <router-link class="pure-menu-link" :to="item.route">{{item.title}}</router-link>
+         <router-link class="pure-menu-link" :to="item.route" :title="item.title"><i class="fa" :class="[item.icon]" aria-hidden="true"></i>
+</router-link>
       </li>
    </ul>
 </div>
