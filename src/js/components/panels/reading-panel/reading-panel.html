@@ -1,4 +1,7 @@
 <div class="scrollingPanel readingPanel">
-   <h1 v-if="chapter" v-html="chapter.citation"></h1>
-   <div v-if="chapter" v-html="chapter.html"></div>
+   <template v-if="chapter">
+      <h1 v-html="chapter.citation"></h1>
+      <div v-html="chapter.html"></div>
+   </template>
+   <div class="loadingIndicator" v-else><i class="fa fa-spinner" aria-hidden="true"></i></div>
 </div>

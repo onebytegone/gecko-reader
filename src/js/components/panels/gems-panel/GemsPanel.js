@@ -9,6 +9,16 @@ module.exports = {
 
    computed: {
 
+      chapter: function() {
+         return this.$store.state.chapter;
+      },
+
+      hasAnyStudyContent: function() {
+         return _.filter(this.studyContent, function(item) {
+            return item.hasAdditionalContent;
+         }).length > 0;
+      },
+
       studyContent: function() {
          var chapter = this.$store.state.chapter,
              items = [],
