@@ -1,5 +1,5 @@
 <div class="panel gemsPanel">
-   <div v-for="item in studyContent">
+   <div class="studyContentGroup" v-for="item in studyContent" v-if="item.hasAdditionalContent">
       <h3 v-html="item.standardCitation"></h3>
       <div v-if="item.studyNotes" v-html="item.studyNotes.content"></div>
    </div>

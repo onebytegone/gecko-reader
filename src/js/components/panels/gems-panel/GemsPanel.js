@@ -31,11 +31,14 @@ module.exports = {
 
          items = _.chain([ verseZero ])
             .concat(_.map(chapter.verses, function(verse) {
+               var studyNotes = _.find(chapter.commentaries, function(commentary) {
+                  return commentary.source === verse.vsID;
+               });
+
                return {
-                  studyNotes: _.find(chapter.commentaries, function(commentary) {
-                     return commentary.source === verse.vsID;
-                  }),
+                  studyNotes: studyNotes,
                   standardCitation: verse.standardCitation,
+                  hasAdditionalContent: !!studyNotes,
                };
             }))
             .filter(_.identity)
