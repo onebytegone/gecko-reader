@@ -1,7 +1,12 @@
 <div class="scrollingPanel bookPicker">
-   <ul class="gridPicker">
-      <li v-for="book in books">
-         <router-link :to="{ name: 'chapterSelection', params: { book: book.urlSegment }}">{{book.officialAbbreviation}}</router-link>
+   <ul class="gridPicker hebrewBooks">
+      <li v-for="book in hebrewBooks">
+         <router-link :class="[ book.color ]" :to="{ name: 'chapterSelection', params: { book: book.urlSegment }}">{{book.officialAbbreviation}}</router-link>
+     </li>
+   </ul>
+   <ul class="gridPicker greekBooks">
+      <li v-for="book in greekBooks">
+         <router-link :class="[ book.color ]" :to="{ name: 'chapterSelection', params: { book: book.urlSegment }}">{{book.officialAbbreviation}}</router-link>
      </li>
    </ul>
 </div>

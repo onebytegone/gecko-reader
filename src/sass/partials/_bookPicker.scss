@@ -3,5 +3,14 @@
 .bookPicker {
    .gridPicker {
       margin-top: 1em;
+      .colorOne {
+         background-color: $md-indigo-300;
+      }
+      .colorTwo {
+         background-color: $md-indigo-400;
+      }
+      .colorThree {
+         background-color: $md-indigo-500;
+      }
    }
 }
