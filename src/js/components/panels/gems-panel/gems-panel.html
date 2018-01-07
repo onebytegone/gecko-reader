@@ -1,5 +1,5 @@
 <div class="scrollingPanel gemsPanel">
-   <template v-if="chapter">
+   <div class="adjustableFont" v-if="chapter">
       <template v-if="hasAnyStudyContent">
          <div class="studyContentGroup" v-for="item in studyContent" v-if="item.hasAdditionalContent">
             <h3 v-html="item.standardCitation"></h3>
@@ -7,6 +7,6 @@
          </div>
       </template>
       <p v-else>No additional content</p>
-   </template>
+   </div>
    <div class="loadingIndicator" v-else><i class="fa fa-spinner" aria-hidden="true"></i></div>
 </div>

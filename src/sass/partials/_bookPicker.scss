@@ -1,8 +1,9 @@
 // Syles for book picker
 
 .bookPicker {
+   padding-top: 1em;
    .gridPicker {
-      margin-top: 1em;
+      margin-bottom: 1em;
       .colorOne {
          background-color: $md-indigo-300;
       }

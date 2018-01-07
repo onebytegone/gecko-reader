@@ -4,4 +4,10 @@
    display: flex;
    flex: 1;
    flex-direction: column;
+   h1 {
+      margin-bottom: 0.2em;
+   }
+   .chapterText {
+      max-width: 100%;
+   }
 }

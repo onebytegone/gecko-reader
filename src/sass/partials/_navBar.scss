@@ -3,7 +3,8 @@
 .navigationBar {
    background-color: $md-indigo-400;
    .pure-menu-link {
-      padding: 1em;
+      font-size: 28px;
+      padding: 8px 16px;
       color: $md-grey-100;
       &:hover,
       &:focus,
