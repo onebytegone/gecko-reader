@@ -72,6 +72,8 @@ module.exports = new Vuex.Store({
       fetchChapter: function(context, chapterNum) {
          var bookNum, startVs, endVs;
 
+         context.commit('storeChapter', undefined);
+
          if (context.state.edition && context.getters.book) {
             bookNum = context.getters.book.bookNum;
             startVs = geckoAPI.makeVerseIdentifer(bookNum, chapterNum, 0);
