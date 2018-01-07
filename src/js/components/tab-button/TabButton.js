@@ -14,10 +14,6 @@ module.exports = {
       name: {
          type: String,
       },
-      isSelected: {
-         type: Boolean,
-         'default': false,
-      },
    },
 
    methods: {

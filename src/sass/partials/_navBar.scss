@@ -1,0 +1,14 @@
+// Navigation bar styles
+
+.navigationBar {
+   background-color: $md-indigo-400;
+   .pure-menu-link {
+      padding: 1em;
+      color: $md-grey-100;
+      &:hover,
+      &:focus,
+      &.router-link-exact-active, {
+         background-color: $md-indigo-700;
+      }
+   }
+}

@@ -1,0 +1,24 @@
+// Tab bar styles
+
+.tabBar {
+   background-color: $md-indigo-400;
+   .pure-menu-selected {
+      .pure-menu-link {
+         background-color: $md-indigo-700;
+         color: $md-grey-100;
+      }
+   }
+   .pure-menu-link {
+      padding: 1em;
+      color: $md-grey-100;
+      &:hover,
+      &:focus {
+         background-color: $md-indigo-700;
+      }
+   }
+}
+
+.tabPanels {
+   display: flex;
+   flex: 1;
+}

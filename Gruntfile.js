@@ -24,7 +24,9 @@ module.exports = function(grunt) {
                main: '<%= project.src.sass.base %>/main.scss',
             },
             css: {
-               thirdparty: [],
+               thirdparty: [
+                  'node_modules/purecss/build/pure.css',
+               ],
             },
          },
          dist: {
@@ -86,6 +88,7 @@ module.exports = function(grunt) {
       sass: {
          options: {
             sourceMap: DEBUG,
+            includePaths: [ 'node_modules' ],
          },
 
          build: {

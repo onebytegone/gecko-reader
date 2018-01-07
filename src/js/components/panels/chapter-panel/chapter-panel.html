@@ -1,10 +1,12 @@
-<div class="panel chapterPanel">
+<div class="panel fixedPanel chapterPanel">
    <div class="tabPanels">
-      <component v-for="tab in tabs" :is="tab.component" v-show="tab.name === selectedTabName"></component>
+      <component v-for="tab in tabs" :key="tab.name" :is="tab.component" v-show="tab.name === selectedTabName"></component>
    </div>
-   <ul class="tabBar">
-      <li v-for="tab in tabs">
-         <tab-button :title="tab.title" :name="tab.name" :isSelected="tab.name === selectedTabName" @click="onTabClick"></tab-button>
-      </li>
-   </ul>
+   <div class="pure-menu pure-menu-horizontal tabBar">
+      <ul class="pure-menu-list">
+         <li class="pure-menu-item" :class="{ 'pure-menu-selected': tab.name === selectedTabName }" v-for="tab in tabs">
+            <tab-button class="pure-menu-link" :title="tab.title" :name="tab.name" @click="onTabClick"></tab-button>
+         </li>
+      </ul>
+   </div>
 </div>

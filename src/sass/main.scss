@@ -1,3 +1,4 @@
+@import "material-colors/dist/colors.scss";
 @import "variables/colors";
 @import "variables/fonts";
 
@@ -5,3 +6,7 @@
 @import "general/mixins";
 
 @import "partials/global";
+@import "partials/app";
+@import "partials/navBar";
+@import "partials/tabBar";
+@import "partials/chapterPanel";
