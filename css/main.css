@@ -20,30 +20,66 @@ h1 {
   width: 100%;
   padding: 0em 1em 2em 1em; }
 
-.text-scale-ten .adjustableFont {
-  font-size: 24px; }
-  .text-scale-ten .adjustableFont .chapterText {
-    font-size: 128px; }
-    .text-scale-ten .adjustableFont .chapterText .chapterNum {
-      padding: 0.25em; }
-  .text-scale-ten .adjustableFont .verse span {
-    line-height: normal; }
-    .text-scale-ten .adjustableFont .verse span.style-b.first {
-      padding-left: 0.5em; }
-    .text-scale-ten .adjustableFont .verse span.style-l {
-      text-indent: -1.5em;
-      padding-left: 1.5em;
-      display: block; }
-    .text-scale-ten .adjustableFont .verse span.style-z {
-      text-indent: -1em;
-      padding-left: 1.5em;
-      display: block; }
-    .text-scale-ten .adjustableFont .verse span.style-p {
-      text-indent: -1.5em;
-      padding-left: 2em;
-      display: block; }
-  .text-scale-ten .adjustableFont .studyNotes {
-    font-size: 128px; }
+.adjustableFont {
+  font-size: 12px; }
+  .text-scale-two .adjustableFont {
+    font-size: 16px; }
+  .text-scale-three .adjustableFont {
+    font-size: 20px; }
+  .text-scale-four .adjustableFont {
+    font-size: 24px; }
+    .text-scale-four .adjustableFont .chapterText,
+    .text-scale-four .adjustableFont .studyNotes {
+      font-size: 26px; }
+  .text-scale-five .adjustableFont {
+    font-size: 24px; }
+    .text-scale-five .adjustableFont .chapterText,
+    .text-scale-five .adjustableFont .studyNotes {
+      font-size: 38px; }
+  .text-scale-six .adjustableFont {
+    font-size: 24px; }
+    .text-scale-six .adjustableFont .chapterText,
+    .text-scale-six .adjustableFont .studyNotes {
+      font-size: 48px; }
+  .text-scale-seven .adjustableFont {
+    font-size: 24px; }
+    .text-scale-seven .adjustableFont .chapterText,
+    .text-scale-seven .adjustableFont .studyNotes {
+      font-size: 64px; }
+  .text-scale-eight .adjustableFont {
+    font-size: 24px; }
+    .text-scale-eight .adjustableFont .chapterText,
+    .text-scale-eight .adjustableFont .studyNotes {
+      font-size: 80px; }
+  .text-scale-nine .adjustableFont {
+    font-size: 24px; }
+    .text-scale-nine .adjustableFont .chapterText,
+    .text-scale-nine .adjustableFont .studyNotes {
+      font-size: 100px; }
+  .text-scale-ten .adjustableFont {
+    font-size: 24px; }
+    .text-scale-ten .adjustableFont .chapterText {
+      font-size: 128px; }
+      .text-scale-ten .adjustableFont .chapterText .chapterNum {
+        padding: 0.25em; }
+    .text-scale-ten .adjustableFont .verse span {
+      line-height: normal; }
+      .text-scale-ten .adjustableFont .verse span.style-b.first {
+        padding-left: 0.5em; }
+      .text-scale-ten .adjustableFont .verse span.style-l {
+        text-indent: -1.5em;
+        padding-left: 1.5em;
+        display: block; }
+      .text-scale-ten .adjustableFont .verse span.style-z {
+        text-indent: -1em;
+        padding-left: 1.5em;
+        display: block; }
+      .text-scale-ten .adjustableFont .verse span.style-p {
+        text-indent: -1.5em;
+        padding-left: 2em;
+        display: block; }
+    .text-scale-ten .adjustableFont .studyNotes {
+      font-size: 128px; }
 
 .navigationBar {
   background-color: #1565c0;
@@ -54,6 +90,9 @@ h1 {
     color: #f5f5f5; }
     .navigationBar .pure-menu-link:hover, .navigationBar .pure-menu-link:focus, .navigationBar .pure-menu-link.router-link-exact-active {
       background-color: #0d47a1; }
+
+.navBarControls {
+  text-align: right; }
 
 .tabBar {
   display: flex;
