@@ -28,6 +28,9 @@ module.exports = function(grunt) {
                   'node_modules/purecss/build/pure.css',
                ],
             },
+            assets: {
+               base: 'assets',
+            },
          },
          dist: {
             base: 'dist',
@@ -40,6 +43,9 @@ module.exports = function(grunt) {
                base: '<%= project.dist.base %>/js',
                main: '<%= project.dist.js.base %>/main.js',
                thirdparty: '<%= project.dist.js.base %>/thirdparty.js',
+            },
+            assets: {
+               base: '<%= project.dist.base %>/assets',
             },
          },
       },
@@ -107,6 +113,11 @@ module.exports = function(grunt) {
       },
 
       copy: {
+         assets: {
+            files: [
+               { expand: true, cwd: '<%= project.src.assets.base %>', src: '*', dest: '<%= project.dist.assets.base %>' },
+            ],
+         },
          markup: {
             files: [
                { expand: true, cwd: '<%= project.src.markup.base %>', src: 'index.html', dest: '<%= project.dist.base %>' },
@@ -154,7 +165,7 @@ module.exports = function(grunt) {
    grunt.registerTask('standards', [ 'eslint' ]);
    grunt.registerTask('build-css', [ 'sass:build', 'cssmin:thirdparty' ]);
    grunt.registerTask('build-js', [ 'browserify:build', 'uglify:build', 'browserify:thirdparty', 'uglify:thirdparty' ]);
-   grunt.registerTask('build', [ 'copy:markup', 'build-css', 'build-js' ]);
+   grunt.registerTask('build', [ 'copy:markup', 'build-css', 'build-js', 'copy:assets' ]);
    grunt.registerTask('develop', [ 'build', 'watch' ]);
    grunt.registerTask('default', [ 'standards', 'build' ]);
 
