@@ -1,0 +1,86 @@
+// Adjustable text sizes
+
+.adjustableFont {
+   font-size: 12px;
+   .text-scale-two & {
+      font-size: 16px;
+   }
+   .text-scale-three & {
+      font-size: 20px;
+   }
+   .text-scale-four & {
+      font-size: 24px;
+      .chapterText,
+      .studyNotes {
+         font-size: 26px;
+      }
+   }
+   .text-scale-five & {
+      font-size: 24px;
+      .chapterText,
+      .studyNotes {
+         font-size: 38px;
+      }
+   }
+   .text-scale-six & {
+      font-size: 24px;
+      .chapterText,
+      .studyNotes {
+         font-size: 48px;
+      }
+   }
+   .text-scale-seven & {
+      font-size: 24px;
+      .chapterText,
+      .studyNotes {
+         font-size: 64px;
+      }
+   }
+   .text-scale-eight & {
+      font-size: 24px;
+      .chapterText,
+      .studyNotes {
+         font-size: 80px;
+      }
+   }
+   .text-scale-nine & {
+      font-size: 24px;
+      .chapterText,
+      .studyNotes {
+         font-size: 100px;
+      }
+   }
+   .text-scale-ten & {
+      font-size: 24px;
+      .chapterText {
+         font-size: 128px;
+         .chapterNum {
+            padding: 0.25em;
+         }
+      }
+      .verse span {
+         line-height: normal;
+         &.style-b.first {
+            padding-left: 0.5em;
+         }
+         &.style-l {
+            text-indent: -1.5em;
+            padding-left: 1.5em;
+            display: block;
+         }
+         &.style-z {
+            text-indent: -1em;
+            padding-left: 1.5em;
+            display: block;
+         }
+         &.style-p {
+            text-indent: -1.5em;
+            padding-left: 2em;
+            display: block;
+         }
+      }
+      .studyNotes {
+         font-size: 128px;
+      }
+   }
+}

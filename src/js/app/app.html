@@ -1,4 +1,4 @@
 <div class="geckoApp" :class="[textScale]">
-   <navigation-bar :items="navigationItems"></navigation-bar>
+   <navigation-bar :items="navigationItems" @navItemClicked="onNavItemClicked"></navigation-bar>
    <router-view></router-view>
 </div>

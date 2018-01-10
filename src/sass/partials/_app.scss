@@ -18,39 +18,3 @@
    width: 100%;
    padding: 0em 1em 2em 1em;
 }
-
-.text-scale-ten {
-   .adjustableFont {
-      font-size: 24px;
-      .chapterText {
-         font-size: 128px;
-         .chapterNum {
-            padding: 0.25em;
-         }
-      }
-      .verse span {
-         line-height: normal;
-         &.style-b.first {
-            padding-left: 0.5em;
-         }
-         &.style-l {
-            text-indent: -1.5em;
-            padding-left: 1.5em;
-            display: block;
-         }
-         &.style-z {
-            text-indent: -1em;
-            padding-left: 1.5em;
-            display: block;
-         }
-         &.style-p {
-            text-indent: -1.5em;
-            padding-left: 2em;
-            display: block;
-         }
-      }
-      .studyNotes {
-         font-size: 128px;
-      }
-   }
-}

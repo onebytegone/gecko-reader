@@ -1,8 +1,25 @@
-<div class="pure-menu pure-menu-horizontal navigationBar">
-   <ul class="pure-menu-list">
-      <li class="pure-menu-item" v-for="item in items">
-         <router-link class="pure-menu-link" :to="item.route" :title="item.title"><i class="fa" :class="[item.icon]" aria-hidden="true"></i>
-</router-link>
-      </li>
-   </ul>
+<div class="navigationBar">
+   <div class="pure-g">
+      <div class="pure-u-1-2">
+         <div class="pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list">
+               <li class="pure-menu-item" v-for="item in items">
+                  <router-link class="pure-menu-link" :to="item.route" :title="item.title"><i class="fa" :class="[item.icon]" aria-hidden="true"></i></router-link>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="pure-u-1-2">
+         <div class="pure-menu pure-menu-horizontal navBarControls">
+            <ul class="pure-menu-list">
+               <li class="pure-menu-item">
+                  <tab-button class="pure-menu-link" v-bind="{ name: 'decreaseTextSize', title: 'Make text smaller', icon: 'fa-minus-square-o' }" @click="onNavItemClicked"></tab-button>
+               </li>
+               <li class="pure-menu-item">
+                  <tab-button class="pure-menu-link" v-bind="{ name: 'increaseTextSize', title: 'Make text larger', icon: 'fa-plus-square-o' }" @click="onNavItemClicked"></tab-button>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
 </div>
