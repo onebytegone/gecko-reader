@@ -1,7 +1,10 @@
-<div class="scrollingPanel readingPanel">
-   <div class="adjustableFont" v-if="chapter">
-      <h1 v-html="chapter.citation"></h1>
-      <div class="chapterText" v-html="chapter.html"></div>
+<div class="readingPanel">
+   <div class="verseHint" v-if="verseNumber">vs&nbsp;{{ verseNumber }}</div>
+   <div class="scrollingPanel " v-on:scroll.passive="onChapterScroll">
+      <div class="adjustableFont" v-if="chapter">
+         <h1 v-html="chapter.citation"></h1>
+         <div class="chapterText" v-html="chapter.html" ref="chapterText"></div>
+      </div>
+      <div class="loadingIndicator" v-else><i class="fa fa-spinner" aria-hidden="true"></i></div>
    </div>
-   <div class="loadingIndicator" v-else><i class="fa fa-spinner" aria-hidden="true"></i></div>
 </div>

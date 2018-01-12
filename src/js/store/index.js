@@ -15,6 +15,7 @@ module.exports = new Vuex.Store({
       languages: undefined,
       edition: undefined,
       chapter: undefined,
+      verseNumber: undefined,
    },
 
    getters: {
@@ -102,6 +103,10 @@ module.exports = new Vuex.Store({
 
       storeChapter: function(state, payload) {
          state.chapter = payload;
+      },
+
+      setVerseNumber: function(state, payload) {
+         state.verseNumber = payload;
       },
 
    },

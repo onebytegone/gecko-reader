@@ -1,0 +1,17 @@
+// Styling for ReadingPanel
+
+.readingPanel {
+   width: 100%;
+   .verseHint {
+      position: absolute;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      background-color: rgba(50, 50, 50, 0.8);
+      font-size: 1.2em;
+      color: $md-white;
+      padding: 6px 10px;
+      border-radius: 2px;
+      margin: 5px 4px;
+   }
+}
