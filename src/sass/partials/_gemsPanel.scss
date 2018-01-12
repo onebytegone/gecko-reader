@@ -13,4 +13,11 @@
    .studyNotes p:first-of-type {
       margin-top: 0;
    }
+   a {
+      // Disabled links until proper support can be added
+      text-decoration: none;
+      pointer-events: none;
+      cursor: default;
+      color: $md-black;
+   }
 }
