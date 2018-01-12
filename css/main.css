@@ -13,6 +13,7 @@ h1 {
   font-family: 'Open Sans', sans-serif; }
 
 .scrollingPanel {
+  height: 100%;
   overflow: auto;
   overflow-wrap: break-word;
   -webkit-overflow-scrolling: touch;
@@ -125,7 +126,7 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 5em;
-  color: #e0e0e0; }
+  color: #9e9e9e; }
   .loadingIndicator i {
     animation: loadingIndicator 2s linear infinite; }
 
@@ -182,11 +183,26 @@ h1 {
 .chapterPanel {
   display: flex;
   flex: 1;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   .chapterPanel h1 {
     margin-bottom: 0.2em; }
   .chapterPanel .chapterText {
     max-width: 100%; }
+
+.readingPanel {
+  width: 100%; }
+  .readingPanel .verseHint {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: rgba(50, 50, 50, 0.8);
+    font-size: 1.2em;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 2px;
+    margin: 5px 4px; }
 
 .gemsPanel h3 {
   margin: 0.5em 0;
@@ -199,6 +215,12 @@ h1 {
 
 .gemsPanel .studyNotes p:first-of-type {
   margin-top: 0; }
+
+.gemsPanel a {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+  color: #000000; }
 
 .chapterText {
   display: inline-block; }
