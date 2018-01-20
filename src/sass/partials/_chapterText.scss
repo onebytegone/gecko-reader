@@ -5,11 +5,13 @@ $color-verseNum: $color-chapterNum;
 
 .chapterText {
    display: inline-block;
+   font-family: $serif;
 }
 
 %numberStyling {
    line-height: 1;
    display: inline-block;
+   font-family: $sans-serif;
    a {
       text-decoration: none;
       // Disabled links until proper support can be added
